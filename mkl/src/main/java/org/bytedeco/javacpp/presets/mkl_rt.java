@@ -45,14 +45,15 @@ import org.bytedeco.javacpp.tools.InfoMapper;
     @Platform(value = "windows", preload = {"libiomp5md", "mkl_avx", "mkl_avx2", "mkl_avx512_mic", "mkl_def", "mkl_mc3", "mkl_core", "mkl_intel_lp64", "mkl_intel_thread"},
                                      includepath = "C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/include/"),
     @Platform(value = "windows-x86",    linkpath = "C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32/",
-                                     preloadpath = {"C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2017/compilers_and_libraries_2017/windows/redist/ia32/compiler/",
-                                                    "C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2017/compilers_and_libraries_2017/windows/redist/ia32/mkl/"}),
+                                     preloadpath = {"C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2018/compilers_and_libraries_2018/windows/redist/ia32/compiler/",
+                                                    "C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2018/compilers_and_libraries_2018/windows/redist/ia32/mkl/"}),
     @Platform(value = "windows-x86_64", linkpath = "C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/",
-                                     preloadpath = {"C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2017/compilers_and_libraries_2017/windows/redist/intel64/compiler/",
-                                                    "C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2017/compilers_and_libraries_2017/windows/redist/intel64/mkl/"}) })
+                                     preloadpath = {"C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2018/compilers_and_libraries_2018/windows/redist/intel64/compiler/",
+                                                    "C:/Program Files (x86)/IntelSWTools/parallel_studio_xe_2018/compilers_and_libraries_2018/windows/redist/intel64/mkl/"}) })
 public class mkl_rt implements InfoMapper {
     public void map(InfoMap infoMap) {
         infoMap.put(new Info("MKL_INT", "MKL_INT64", "MKL_UINT", "MKL_UINT64", "MKL_LONG", "MKL_DECLSPEC", "MKL_CALL_CONV", "INTEL_API_DEF",
+                             "MKL_UINT8", "MKL_INT8", "MKL_INT16", "MKL_INT32",
 
                              "mkl_simatcopy", "mkl_dimatcopy", "mkl_cimatcopy", "mkl_zimatcopy", "mkl_somatcopy", "mkl_domatcopy", "mkl_comatcopy", "mkl_zomatcopy",
                              "mkl_somatcopy2", "mkl_domatcopy2", "mkl_comatcopy2", "mkl_zomatcopy2", "mkl_somatadd", "mkl_domatadd", "mkl_comatadd", "mkl_zomatadd",
